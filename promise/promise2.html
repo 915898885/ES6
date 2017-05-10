@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var p1=new Promise(function(resolve,reject){
+		resolve(1);
+	}).then(function(value){
+		console.log(value);
+		return value+1;//传递给下一次的then
+	},function(value){
+		alert("失败"+value);
+	}).then(function(value){
+		console.log(value);
+	})
+</script>
+</html>

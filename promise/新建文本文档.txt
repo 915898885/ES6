@@ -1,0 +1,17 @@
+用来异步操作
+
+pending（等待、处理中）-》Resolve（完成、fullFilled）
+			Rejected（拒绝、失败）
+
+
+catch--捕获错误
+
+all--全部，用于将多个promise对象，组合，包装成全新的promise
+
+race--返回一个promise对象--最先执行的对象
+
+Promise.reject()  --生成一个错误的promise
+Promise.resolve()  --生成一个成功的promise对象
+
+Promise.resolve(value)
+Promise.resolve(promise)

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var p1=new Promise(function(resolve,reject){
+		reject(2);
+	}).then(function(value){
+		alert("成功"+value);
+	},function(value){
+		alert("失败"+value);
+	})
+	// p1.then(成功的(resolve),失败(reject))
+</script>
+</html>

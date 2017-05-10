@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var p1=new Promise(function(resolve,reject){
+		//resolve 成功了
+		//reject 失败了
+		// if(异步处理成功){
+		// 	resolve(成功的数据);
+		// }else{
+		// 	reject(失败的原因);
+		// }
+		resolve(1);
+	}).then(function(value){
+		alert("成功"+value);
+	},function(){
+		alert("失败");
+	})
+	// p1.then(成功的(resolve),失败(reject))
+</script>
+</html>

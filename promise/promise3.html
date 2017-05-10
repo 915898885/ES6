@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn1">click</button>
+	<div id="box1"></div>
+</body>
+<script>
+	let btn=document.getElementById('btn1');
+	let box=document.getElementById('box1');
+	btn.onclick=function(){
+		ajax('a.txt',function(str){
+			alert(str)
+		},function(str){
+			alert(str)
+		})
+	}
+	function ajax(url,fnSucc,fnFail){//简单的封装ajax
+		var oAjax=new XMLHttpRequest();
+		oAjax.open('GET',url,true);
+		oAjax.send();
+		oAjax.onload=function(){
+			if(oAjax.readyState==4 && oAjax.status==200){
+				fnSucc(oAjax.responseText);
+			}else{
+				fnFail(oAjax.status);
+			}
+		}
+	}
+</script>
+</html>

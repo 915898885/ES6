@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let p1=Promise.resolve(3);
+	let p2=Promise.reject(5);
+	Promise.all([true,p2,p1]).then(function(value){//有一个错误走失败
+		console.log("成功了,"+value);
+	},function(value){
+		console.log('错误了,'+value)
+	})
+
+	Promise.all([true,p1]).then(function(value){//全部成功走成功
+		console.log("成功了,"+value);
+	},function(value){
+		console.log('错误了,'+value)
+	})
+</script>
+</html>
